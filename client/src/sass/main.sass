@@ -1,0 +1,190 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font: inherit
+  color: inherit
+
+.BL
+  color: #6C77C1
+.BV
+  color: #2F7FCC
+.CE
+  color: #E88F4F
+.CEP
+  color: #F0A78E
+.CH
+  color: #98E2EB
+.CS
+  color: #EFCE8F
+.G
+  color: #60608F
+.J
+  color: #BABD2F
+.N
+  color: #C2C2DA
+.N2
+  color: #9292AA
+.PT
+  color: #2EBA7E
+.PS
+  color: #F1C4F6
+.R
+  color: #CB546B
+.ROSE
+  color: #ED67EA
+.S
+  color: #CAA4CF
+.T
+  color: #A4CF9E
+.V
+  color: #009D9D
+.VP
+  color: #2ECF73
+.VI
+  color: #C53DFF
+
+code
+  font-family: monospace
+
+body
+  font-size: 12pt
+
+#root
+  background-color: rgb(106, 116, 149)
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  height: 100vh
+
+.App
+  width: 75%
+  height: 75%
+
+  background-color: #122529
+  border-radius: .4rem
+  overflow: hidden
+
+  display: grid
+  padding: .5em
+
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: .5em
+  color: #c2c2da
+
+  .Input
+    display: block
+    width: 100%
+    padding: .25em
+    border-radius: .25em
+    border-width: 1px
+    border-style: solid
+    outline: none
+
+    &.Text,
+      background-color: #121212
+      border-color: #040404 #616161 #616161 #040404
+      color: #6c77c1
+
+    &.Button
+      background-color: #2e4a52
+      border-color: #73858b #0d1417 #0d1417 #73858b
+      cursor: pointer
+
+      &:active
+        background-color: #1b373d
+        border-color: #0d1417 #73858b #73858b #0d1417
+
+
+  .LeftContainer
+    grid-column: 1
+    overflow-y: auto
+    overflow-x: hidden
+
+    .Thumb
+      display: flex
+      background-color: #22464d
+      margin-bottom: .25em
+      cursor: pointer
+
+      box-shadow: 0 1px 0 0 #2f5259 inset
+
+      .Thumb-content
+        overflow: hidden
+        // .Thumb-header
+
+      &.Selected
+        background-color: #1b373d
+        box-shadow: 0 1px 0 0 #254146 inset
+
+      img
+        display: block
+
+      .Thumb-content
+        flex-grow: 1
+        padding: .25rem
+
+  .RightContainer
+    grid-column: 2 / 5
+    overflow-y: auto
+
+    .Message
+      display: flex
+      background-color: #22464d
+      margin-bottom: .25em
+
+      img
+        display: block
+
+      .Message-content
+        flex-grow: 1
+        padding: .25rem
+        overflow: hidden
+
+        .Message-body
+          white-space: pre-line
+          overflow-wrap: break-word
+
+    &.Login
+      grid-column: 3
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-content: center
+      align-items: center
+
+  .Avatar
+    display: block
+    width: 64px
+    height: 64px
+    outline: solid 2px black
+    outline-offset: -2px
+
+  .MarginBottom
+    margin-bottom: .25em
+  
+  textarea
+    resize: none
+  
+  .MenuButton
+    position: sticky
+    bottom: 0
+
+.scrollbar-container
+  padding-right: .5em
+
+.ps
+  *, *:hover, *:active
+    opacity: 1 !important
+
+  .ps__rail-y, .ps__rail-y:hover, .ps__rail-y:active
+    width: .15em !important
+    background-color: #002222 !important
+
+  .ps__thumb-y, .ps__thumb-y:hover, .ps__thumb-y:active
+    width: .15em !important
+    background-color: #008888 !important
+    cursor: pointer
+    right: 0

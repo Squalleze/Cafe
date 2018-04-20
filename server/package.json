@@ -1,0 +1,14 @@
+{
+  "name": "cafe-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "node --experimental-modules ."
+  },
+  "author": "Vinicius Giroto",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
+}
